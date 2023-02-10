@@ -1,7 +1,8 @@
 import React from 'react'
 import './editable.css'
 
-function EditableRow({editData,handleEditDataValue,setEditDetails,handleEditFormSave}) {
+function EditableRow(props) {
+  const {editData,handleEditDataValue,setEditDetails,handleEditFormSave} = props;
   return (
     <div>
         <div className='editableRow'>
@@ -28,7 +29,7 @@ function EditableRow({editData,handleEditDataValue,setEditDetails,handleEditForm
         </div>
         <div>
             <button onClick={handleEditFormSave}>Save</button>
-            <button onClick={(e)=>setEditDetails(null)}>Cancel</button>
+            <button onClick={()=>setEditDetails(null)}>Cancel</button>
         </div>
     </div>
   )
