@@ -3,9 +3,9 @@ import EditableRow from './EditableRow/EditableRow'
 import IndividualData from './IndividualExcelData'
 
 function Data(props) {
-    const { excelData, search ,setExcelData} =props;
+    const {excelData, search ,setExcelData} =props;
     const [editDetails ,setEditDetails] = useState(null);
-    const [ editData,setEditData ] = useState({
+    const [editData, setEditData] = useState({
         FirstName: '',
         LastName: '',
         gender: '',
@@ -73,7 +73,6 @@ function Data(props) {
         else if(item.LastName.toLowerCase().includes(search.toLowerCase())|| item.FirstName.toLowerCase().includes(search.toLowerCase()) ){
             return item;
         }
-        console.log(excelData)
     }).map((individualExcelData)=>(
         <tr key={individualExcelData.Id}>
             <Fragment>
