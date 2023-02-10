@@ -51,7 +51,7 @@ function CollapseTable(props) {
                 <tr>
                   {excelData[0] &&
                     Object.keys(excelData[0]).map((header, index) => (
-                      <th key={index} onClick={()=> sorting(header)} >{header.toUpperCase()}</th>
+                      <th onClick={()=> sorting(header)} >{header.toUpperCase()}</th>
                     ))}
                     <th scope='col'>ACTIONS</th>               
                 </tr>          
