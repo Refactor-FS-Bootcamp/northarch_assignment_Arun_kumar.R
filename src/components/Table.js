@@ -5,19 +5,15 @@ import './Table.css'
 
 
 function CollapseTable(props) {
-    const { excelData=[],setExcelData } = props;
+    const {excelData=[], setExcelData} = props;
     const [order,setOrder]= useState('ASC')
     const [search ,setSearch] = useState('')
-    const [ currentPage, setCurrentPage] =useState(0)
+    const [currentPage, setCurrentPage] =useState(0)
     const perPage = 2
 
-
     const [collapse,setCollapse] = useState(true)
-    console.log("x", excelData.length);
-
 
     const sorting = (col) => {
-      console.log(col)
       if(order === 'ASC'){
         const sorted = [...excelData].sort((a,b)=>
         a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1)
